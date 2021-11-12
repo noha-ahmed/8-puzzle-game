@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" prefHeight="543.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Controller">
+    <children>
+        <ImageView fitHeight="630.0" fitWidth="964.0" layoutX="-3.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic.jpg" />
+         </image>
+        </ImageView>
+        <AnchorPane layoutX="461.0" layoutY="193.0" prefHeight="70.0" prefWidth="466.0" style="-fx-background-color: whitransaprentte; -fx-border-color: white;">
+            <children>
+                <Button fx:id="shuffle" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#shuffle" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: white;" text="Shuffle" textFill="#da1313">
+                    <font>
+                        <Font name="Century Schoolbook Bold Italic" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="start" layoutX="343.0" layoutY="15.0" mnemonicParsing="false" onAction="#start" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: white;" text="Start" textFill="#da1313">
+                    <font>
+                        <Font name="Century Schoolbook Bold Italic" size="12.0" />
+                    </font>
+                </Button>
+                <ComboBox fx:id="expandChoice" layoutX="144.0" layoutY="22.0" prefHeight="25.0" prefWidth="178.0" promptText="DFS" style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="DFS" />
+                            <String fx:value="BFS" />
+                            <String fx:value="A* (Manhattan)" />
+                            <String fx:value="A* (Euclidean)" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="14.0" layoutY="123.0" prefHeight="415.0" prefWidth="416.0" style="-fx-border-color: white; -fx-background-color: transaprent;">
+            <children>
+                <GridPane fx:id="gridPane" alignment="center" hgap="5.0" layoutX="16.0" layoutY="14.0" prefHeight="342.0" prefWidth="384.0" vgap="5.0">
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <children>
+                        <Button fx:id="btn0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="1">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn1" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="2" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn7" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="3" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn6" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="4" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn5" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn4" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn3" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="7" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn2" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="8" GridPane.columnIndex="2">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn8" layoutX="72.0" layoutY="52.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: black;" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Century Schoolbook" size="39.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </GridPane>
+            <Label layoutX="185.0" layoutY="366.0" text="Simulate" />
+            <ImageView fitHeight="42.0" fitWidth="60.0" layoutX="252.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@rightArrow.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextStep" layoutX="251.0" layoutY="352.0" mnemonicParsing="false" onAction="#nextMove" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: transparent;" textFill="#da1313">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="42.0" fitWidth="60.0" layoutX="102.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@leftArrow.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="previousStep" layoutX="102.0" layoutY="352.0" mnemonicParsing="false" onAction="#previousMove" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: transparent;" textFill="#da1313">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="335.0" layoutY="354.0" mnemonicParsing="false" onAction="#enable" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: white;" text="reset" textFill="#da1313">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="365.0" layoutY="26.0" prefHeight="54.0" prefWidth="226.0" style="-fx-border-color: white; -fx-border-radius: 30;" text=" 8-Puzzle Game">
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="27.0" />
+            </font>
+        </Label>
+        <TextField fx:id="input" layoutX="642.0" layoutY="123.0" prefHeight="26.0" prefWidth="178.0" promptText="ex:012345..." />
+        <Label layoutX="467.0" layoutY="115.0" prefHeight="42.0" prefWidth="150.0" style="-fx-border-color: white; -fx-border-radius: 5;" text=" Enter initial state:">
+            <font>
+                <Font name="Comic Sans MS" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="error" layoutX="642.0" layoutY="157.0" prefHeight="26.0" prefWidth="263.0">
+            <font>
+                <Font name="Comic Sans MS" size="15.0" />
+            </font>
+        </Label>
+      <AnchorPane fx:id="anchor" layoutX="461.0" layoutY="278.0" prefHeight="260.0" prefWidth="466.0" style="-fx-border-color: white;" visible="false">
+         <children>
+            <TextField fx:id="depth" editable="false" layoutX="180.0" layoutY="212.0" prefHeight="26.0" prefWidth="171.0" />
+            <Label layoutX="176.0" layoutY="14.0" prefHeight="54.0" prefWidth="114.0" style="-fx-border-color: white; -fx-border-radius: 10;" text=" Output">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="81.0" prefHeight="42.0" prefWidth="150.0" style="-fx-border-color: white; -fx-border-radius: 10;" text=" Cost to path :">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="142.0" prefHeight="42.0" prefWidth="150.0" style="-fx-border-color: white; -fx-border-radius: 10;" text=" Time Taken :">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="204.0" prefHeight="42.0" prefWidth="150.0" style="-fx-border-color: white; -fx-border-radius: 10;" text=" Max depth :">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cost" editable="false" layoutX="180.0" layoutY="89.0" prefHeight="26.0" prefWidth="171.0" />
+            <TextField fx:id="time" editable="false" layoutX="180.0" layoutY="150.0" prefHeight="26.0" prefWidth="171.0" />
+            <Label layoutX="360.0" layoutY="150.0" prefHeight="26.0" prefWidth="100.0" text="microseconds">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="set" layoutX="830.0" layoutY="123.0" mnemonicParsing="false" onAction="#setGrid" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: white;" text="set" textFill="#da1313">
+         <font>
+            <Font name="Century Schoolbook Bold Italic" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
