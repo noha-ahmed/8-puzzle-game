@@ -56,18 +56,5 @@ public class AStarAgent extends SearchAgent {
         }
         return false;
     }
-    public static void main(String[] args){
-        SearchAgent agent = new AStarAgent(new ManhattanHeuristic());
-        IState initialState = new AState("432650781",0);
-        agent.search(initialState);
-        if(agent.finalState != null)
-            agent.finalState.printState();
-        else
-            System.out.println("UNSOLVABLE");
-        ArrayList<String> path = agent.getPath();
-        for(String s : path ){
-            System.out.println(s);
-        }
-    }
 }
 
