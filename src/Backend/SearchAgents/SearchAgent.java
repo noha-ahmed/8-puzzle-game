@@ -20,8 +20,17 @@ public abstract class SearchAgent {
     protected ArrayList<String> path = new ArrayList<>();
     protected String methodOfSearch;
 
+    /*
+    * searched for the path to a goal
+    * if the goal could be reached it returns true
+    * if not (unsolvable) it returns false
+    */
     abstract public boolean  search(IState initialState);
 
+    /*
+    * this method constructs the path to the goal by iterating over the parents
+    * starting from the gaol state and going up
+    */
     public void constructPath(){
         if(this.finalState == null){
             return;
@@ -35,6 +44,10 @@ public abstract class SearchAgent {
         Collections.reverse(this.path);
     }
 
+    /*
+    * returns an arrayList of the states in the path
+    * and adds the states to a file
+    */
     public ArrayList<String> getPath(){
         try {
             String initialState = this.path.get(0);
@@ -52,9 +65,16 @@ public abstract class SearchAgent {
         }
         return this.path;
     }
+    /*
+    * returns the cost of the path
+    */
     public int getCost(){
         return this.cost;
     }
+    /*
+    * returns an arraylist of states expanded
+    * and writes the states to a file
+    */
     public ArrayList<String> getStatesExpanded(){
         try {
             String initialState = this.path.get(0);
@@ -72,6 +92,9 @@ public abstract class SearchAgent {
         }
         return this.statesExpanded;
     }
+    /*
+    * returns the max search depth the algorithm reached
+    */
     public int getSearchDepth(){
         return this.searchDepth;
     }

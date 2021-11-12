@@ -7,16 +7,12 @@ import Backend.Heuristics.*;
 import Backend.State.*;
 
 public class AStarAgent extends SearchAgent {
-
     private IHeuristic heuristicFn;
     private HashMap<String, AState> visited = new HashMap<String, AState>();
     private PriorityQueue<AState> frontier = new PriorityQueue();
-    
     public AStarAgent (IHeuristic heuristic){
         this.heuristicFn = heuristic;
     }
-
-
     @Override
     public boolean search(IState initialState) {
         AState state = (AState) initialState;

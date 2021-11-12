@@ -6,7 +6,10 @@ import Backend.State.*;
 
 
 public class Factory {
-
+    /*
+    * it takes a string type of agent(search method)
+    * returns the correct agent
+    */
     public SearchAgent createAgent(String type){
         if(type.compareToIgnoreCase(SearchAgent.BFS) == 0)
             return new BFSAgent();
@@ -19,7 +22,12 @@ public class Factory {
         
         return null;
     }
-
+    /*
+     * it takes a string type of agent(search method)
+     * returns the correct state
+     * normal state in case of BFS/DFS
+     * Astate in case of A*
+     */
     public IState createState(String state, String methodType){
         if(methodType.compareToIgnoreCase(SearchAgent.BFS) == 0 || methodType.compareToIgnoreCase(SearchAgent.DFS) == 0)
             return new State(state);
