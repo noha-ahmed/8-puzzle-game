@@ -19,11 +19,14 @@ public class PuzzleSolver implements IPuzzleSolver {
     public boolean solvePuzzle(String initialState, String methodOfSearch){
         agent = factory.createAgent(methodOfSearch);
         IState state = factory.createState(initialState, methodOfSearch);
+        agent.setMethodOfSearch(methodOfSearch);
         long start = System.nanoTime();
         boolean isSolvable = agent.search(state);
         long end = System.nanoTime();
         runningTime = ( end-start)/1000;
         agent.constructPath();
+        if(isSolvable)
+            getExpandedStates();
         return isSolvable;
     }
 
