@@ -40,17 +40,5 @@ public class DFSAgent extends SearchAgent {
         }
         return false;
     }
-
-    public static void main( String[] args ){
-        IState initialState = new State("432650781");
-        SearchAgent agent = new DFSAgent();
-        agent.search(initialState);
-        System.out.println(agent.finalState);
-        agent.finalState.printState();
-        ArrayList<String> path = agent.getPath();
-        for(String s : path ){
-            System.out.println(s);
-        }
-    }
 }
     

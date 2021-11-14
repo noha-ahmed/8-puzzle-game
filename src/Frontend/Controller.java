@@ -95,6 +95,11 @@
                      error.setVisible(true);
                      return false;
                  }
+                 if(!(Integer.parseInt(c+"") < 9 && Integer.parseInt(c+"") >= 0)){
+                     error.setText(" Enter a valid state please !");
+                     error.setVisible(true);
+                     return false;
+                 }
                  else nums.add(c);
              }
          }
@@ -189,8 +194,7 @@
          error.setVisible(false);
          expandChoice.setDisable(true);
          input.setDisable(true);
-         set.setDisable(false);
-        // imageLeft.se
+         set.setDisable(true);
      }
 
      public void enable() {
@@ -205,8 +209,7 @@
          currentStateCounter=1;
          setElements(input.getText());
          input.setDisable(false);
-         set.setDisable(true);
-
+         set.setDisable(false);
      }
 
      Random random=new Random();
